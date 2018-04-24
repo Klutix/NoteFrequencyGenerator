@@ -1,4 +1,14 @@
-class NoteFrequencyGenerator
+//klutix~
+//THIS CRYPTIC LOOKING CLASS WAS PURPOSEFULLY CREATED AS AN EDUCATIONAL CHALLENGE AS MY INTRO TO LABMDA STYLE EXPRESSIONS WITH C# (IN ADDITION TO THE ENCAPSULATING CHALLENGE). 
+//THIS CLASS COULD HAVE BEEN WRITTEN MULTIPLE WAYS BUT MY PERSONAL CHALLENGE WAS TO USE ONLY "C# LAMBDA EXPRESSIONS."
+//----------------------------------------------------------------------------------------------------------------------------------------
+using System;
+using System.Collections.Generic;
+using System.Linq;
+
+namespace NotePlayerAndGraphChallenge
+{
+    class NoteFrequencyGenerator
     {
         //all the parts of this exprimental creation
         static Func<int, int>    OctaveFromKeyNo = (n) => (n>3) ? n > 15 ? (n-3) / 12 + ((n-3) % 12 != 0 ? 1 : 0):1:0;
@@ -14,4 +24,4 @@ class NoteFrequencyGenerator
              Enumerable.Range(st, ed).ToList().ForEach(x => dct[BuildFullSymbol(x)] = MakeNoteFreq(x));
              return dct;
          };       
-    }
+    }}
